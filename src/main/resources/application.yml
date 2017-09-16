@@ -1,0 +1,20 @@
+server:
+  port: 8088
+spring:
+  profiles.active: develop
+---
+spring:
+  profiles: develop
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/banco_hierro
+    username: moho_dimittis
+    password: abcd.123
+    driverClassName: org.postgresql.Driver
+  mvc:
+    throw-exception-if-no-handler-found: true
